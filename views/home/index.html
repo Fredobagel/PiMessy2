@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="homeModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Rubber Duck Invaders</title>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+                    <img class="logo" src="/images/logo.png">
+                </a>
+            </div>
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="about" ui-sref-active="active">Get App</a></li>
+                   <li> <a ui-sref="highScores" ui-sref-active="active">High Scores</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body ng-controller="homeController as homeCtrl">
+<button ng-click="homeCtrl.createRoom()"> make new rooms</button>
+{{homeCtrl.value}}
+<ui-view></ui-view>
+
+
+<!--Dependencies-->
+<script src="/scripts/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheets/style.css">
+<script src="/scripts/angular/angular.min.js"></script>
+<script src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="javascripts/homeController.js"></script>
+<script src="/scripts/bootstrap/dist/js/bootstrap.min.js"></script></body>
+</html>
